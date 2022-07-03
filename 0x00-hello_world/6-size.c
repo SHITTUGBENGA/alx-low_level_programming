@@ -3,9 +3,9 @@
 /**
  * main - Entry point
  *
- * return - return Always 0 (Success)
+ * return - returns Aways 0 Success
+ *
  */
-
 int main(void)
 {
 	int a;
