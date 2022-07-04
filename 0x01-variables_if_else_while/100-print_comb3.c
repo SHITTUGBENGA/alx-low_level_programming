@@ -9,21 +9,26 @@
 
 int main(void)
 {
-	int i;
+	int i, j;
 
 	for (i = '0'; i <= '9'; i++)
 	{
-		putchar(i);
-
-		if (i != '9')
+		for (j = '0'; j < '9'; j++)
 		{
-			putchar(',');
-			putchar(' ');
-		}
+			if (j != i)
+			{
+				putchar(i);
+				putchar(j);
 
+				if (i == '8' && j == '9')
+					continue;
+				putchar(',');
+				putchar(' ');
+
+			}
+		}
 	}
 	putchar('\n');
 
 	return (0);
-
 }
