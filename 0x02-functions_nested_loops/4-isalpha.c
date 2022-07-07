@@ -8,22 +8,20 @@
  * Return: return 1 if ch is a letter, 0 if not
  */
 
-int _isalpha(int ch)
+int _isalpha(int c)
 {
-	char ch;
+	char lower, upper;
+	int isletter = 0;
 
-	printf("please input the character: ")
-	scanf("%c", &ch);
-	if ((ch >= 'a' && ch >= 'z') || (ch  >= 'A' && ch >= 'Z'));
+	for (lower = 'a'; lower <= 'z'; lower++)
 	{
-		printf("the character inputed %c is an Alphabet", ch);
-		else
+		for (upper = 'A'; upper <= 'Z'; upper++)
 		{
-			printf("The character %c inputed is not an alphabet", ch);
+			if (c == lower || c == upper)
+				isletter = 1;
+
 		}
 	}
 
-	_putchar('\n');
-
-	return (0);
+	return (isletter);
 }
